@@ -101,7 +101,7 @@ def get_probability(proto_pos,neg_proto,query_set_out):
      - query_set_out:  Model output for the first 8 samples of the query set
 
      Out:
-     - Probabiility array for the positive class
+     - Probability array for the positive class
      """
 
     

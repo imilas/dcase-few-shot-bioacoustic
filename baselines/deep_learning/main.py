@@ -143,7 +143,6 @@ def main(conf : DictConfig):
 
 
     if conf.set.train:
-
         if not os.path.isdir(conf.path.Model):
             os.makedirs(conf.path.Model)
 
@@ -205,8 +204,8 @@ def main(conf : DictConfig):
         name_arr = np.array([])
         onset_arr = np.array([])
         offset_arr = np.array([])
-        all_feat_files = [file for file in glob(os.path.join(conf.path.feat_eval,'*.h5'))]
-
+        all_feat_files = [file for file in glob(os.path.join(conf.path.feat_eval,'ME*.h5'))]
+        
         for feat_file in all_feat_files:
             feat_name = feat_file.split('/')[-1]
             audio_name = feat_name.replace('h5','wav')
